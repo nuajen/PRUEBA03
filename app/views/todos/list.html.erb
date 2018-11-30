@@ -7,13 +7,19 @@
       <th colspan="6"></th>
     </tr>
   </thead>
+ 
+ <tbody>
+    <% @todos.each do |todo| %>
 
+
+      <tr>
+        <td><%= todo.description %></td>
   </div>
 
 <div class="row">
 <h1>Todos completados</h2>
 <div class="col-md-6">
-</div>
+
 
 <table class="table table-dark">
   <thead>
@@ -23,3 +29,11 @@
       <th colspan="6"></th>
     </tr>
   </thead>
+ <tbody>
+    <% @todos.each do |todo| %>
+
+
+      <tr>
+        <td><%= todo.completed %></td>
+
+  </div>
