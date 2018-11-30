@@ -9,7 +9,7 @@
 </div>
 
 
-<table class="table table-bordered">
+<table class="table table-dark">
   <thead>
     <tr class="table-secondary">
       <th>Description</th>
@@ -20,6 +20,8 @@
 
   <tbody>
     <% @todos.each do |todo| %>
+
+
       <tr>
         <td><%= todo.description %></td>
         <td><%= todo.completed %></td>
@@ -27,6 +29,8 @@
         <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
         <td><%= link_to 'Delete', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
+  
     <% end %>
   </tbody>
 </table>

@@ -9,6 +9,10 @@ class TodosController < ApplicationController
     @todos = Todo.all
   end
 
+  def list
+    @todos = Todo.all
+  end
+
   # GET /todos/1
   # GET /todos/1.json
   def show
@@ -85,6 +89,18 @@ class TodosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def completed
+    @todo = Todo.find(params[:id])
+    if completed = true
+      @todo.save
+       redirect_to root_path
+
+    end
+
+  end
+
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
